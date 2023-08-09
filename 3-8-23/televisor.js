@@ -1,60 +1,50 @@
-class Televisor {
-    private isOn: boolean;
-    private volume: number;
-    private channel: number;
-
-    constructor() {
+var Televisor = /** @class */ (function () {
+    function Televisor() {
         this.isOn = true;
         this.volume = 0;
         this.channel = 0;
     }
-
-    switchOffOn(): void {
+    Televisor.prototype.switchOffOn = function () {
         this.isOn = !this.isOn;
-        if(this.isOn) {
+        if (this.isOn) {
             console.log("El televisor esta Prendido");
-        } else {
+        }
+        else {
             console.log("El televisor esta Apagado");
         }
-    }
-
-    volUp(): void {
+    };
+    Televisor.prototype.volUp = function () {
         if (this.isOn && this.volume < 20) {
             this.volume++;
         }
-    }
-
-    volDown(): void {
+    };
+    Televisor.prototype.volDown = function () {
         if (this.isOn && this.volume > 0) {
             this.volume--;
         }
-    }
-
-    channelUp(): void {
+    };
+    Televisor.prototype.channelUp = function () {
         if (this.isOn && this.channel < 99) {
             this.channel++;
         }
-    }
-
-    channelDown(): void {
+    };
+    Televisor.prototype.channelDown = function () {
         if (this.isOn && this.channel > 0) {
             this.channel--;
         }
-    }
-
-    pickChannel(channel: number): void {
+    };
+    Televisor.prototype.pickChannel = function (channel) {
         if (this.isOn && channel >= 1 && channel <= 99) {
             this.channel = channel;
         }
-    }
-
-    info(): string {
-        const horaActual = new Date().toLocaleTimeString();
-        return `Canal: ${this.channel}, Volumen: ${this.volume}, Hora: ${horaActual}`;
-    }
-}
-
-const tv01 = new Televisor();
+    };
+    Televisor.prototype.info = function () {
+        var horaActual = new Date().toLocaleTimeString();
+        return "Canal: ".concat(this.channel, ", Volumen: ").concat(this.volume, ", Hora: ").concat(horaActual);
+    };
+    return Televisor;
+}());
+var tv01 = new Televisor();
 tv01.switchOffOn();
 tv01.switchOffOn();
 tv01.pickChannel(18);
