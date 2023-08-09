@@ -19,7 +19,7 @@ class Televisor {
     }
 
     volUp(): void {
-        if (this.isOn && this.volume < 20) {
+        if (this.isOn && this.volume < 100) {
             this.volume++;
         }
     }
@@ -49,6 +49,7 @@ class Televisor {
     }
 
     info(): string {
+        //
         const horaActual = new Date().toLocaleTimeString();
         return `Canal: ${this.channel}, Volumen: ${this.volume}, Hora: ${horaActual}`;
     }
