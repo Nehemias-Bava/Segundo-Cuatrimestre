@@ -4,7 +4,7 @@ class Televisor {
     private channel: number;
 
     constructor() {
-        this.isOn = true;
+        this.isOn = false;
         this.volume = 0;
         this.channel = 0;
     }
@@ -56,7 +56,7 @@ class Televisor {
 }
 
 const tv01 = new Televisor();
-tv01.switchOffOn();
+//Prendo el televisor
 tv01.switchOffOn();
 tv01.pickChannel(18);
 //Cambio el canal + hasta el 24

@@ -1,6 +1,6 @@
 var Televisor = /** @class */ (function () {
     function Televisor() {
-        this.isOn = true;
+        this.isOn = false;
         this.volume = 0;
         this.channel = 0;
     }
@@ -14,7 +14,7 @@ var Televisor = /** @class */ (function () {
         }
     };
     Televisor.prototype.volUp = function () {
-        if (this.isOn && this.volume < 20) {
+        if (this.isOn && this.volume < 100) {
             this.volume++;
         }
     };
@@ -39,13 +39,13 @@ var Televisor = /** @class */ (function () {
         }
     };
     Televisor.prototype.info = function () {
+        //
         var horaActual = new Date().toLocaleTimeString();
         return "Canal: ".concat(this.channel, ", Volumen: ").concat(this.volume, ", Hora: ").concat(horaActual);
     };
     return Televisor;
 }());
 var tv01 = new Televisor();
-tv01.switchOffOn();
 tv01.switchOffOn();
 tv01.pickChannel(18);
 //Cambio el canal + hasta el 24
