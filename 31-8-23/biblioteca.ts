@@ -28,9 +28,9 @@ class Revista extends Publicacion {
 class Usuario {
     nombre: string;
     direccion: string;
-    numeroTelefono: string;
+    numeroTelefono: number;
 
-    constructor(nombre: string, direccion: string, numeroTelefono: string) {
+    constructor(nombre: string, direccion: string, numeroTelefono: number) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.numeroTelefono = numeroTelefono;
@@ -67,7 +67,7 @@ const biblioteca = new Biblioteca();
 const libro1 = new Libro("Título del Libro 1", "Autor 1", 2023);
 const revista1 = new Revista("Título de la Revista 1", "Editor 1", 2023);
 
-const usuario1 = new Usuario("Usuario 1", "Dirección 1", "123-456-7890");
+const usuario1 = new Usuario("Usuario 1", "Dirección 1", 222324);
 
 biblioteca.agregarPublicacion(libro1);
 biblioteca.agregarPublicacion(revista1);
