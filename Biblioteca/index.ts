@@ -267,7 +267,7 @@ export class Library {
                     this.deleteUser();
                     break;
                 default:
-                    console.log("baiiiii xxs");
+                    console.log("Adios, vuelta pronto! :D");
                     return;
 
 
