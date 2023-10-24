@@ -8,24 +8,28 @@ var loanManager = /** @class */ (function () {
         this.loans;
     }
     ;
-    // static readUsers(): User[] {
-    //     try {
-    //         const userData = fs.readFileSync("./users.json", { encoding: "utf-8" });
-    //         return JSON.parse(userData) as User[];
-    //     } catch (err) {
-    //         console.error("Error al leer los datos de usuarios:", err);
-    //         throw err;
-    //     }
-    // };
-    // static readItems(): Item[] {
-    //     try {
-    //         const itemsData = fs.readFileSync("./items.json", { encoding: "utf-8" });
-    //         return JSON.parse(itemsData) as Item[];
-    //     } catch (err) {
-    //         console.error("Error al leer los datos de ítems:", err);
-    //         throw err;
-    //     }
-    // };
+    loanManager.readUsers = function () {
+        try {
+            var userData = fs.readFileSync("./users.json", { encoding: "utf-8" });
+            return JSON.parse(userData);
+        }
+        catch (err) {
+            console.error("Error al leer los datos de usuarios:", err);
+            throw err;
+        }
+    };
+    ;
+    loanManager.readItems = function () {
+        try {
+            var itemsData = fs.readFileSync("./items.json", { encoding: "utf-8" });
+            return JSON.parse(itemsData);
+        }
+        catch (err) {
+            console.error("Error al leer los datos de ítems:", err);
+            throw err;
+        }
+    };
+    ;
     loanManager.readLoans = function () {
         try {
             var loansData = fs.readFileSync("./loans.json", { encoding: "utf-8" });

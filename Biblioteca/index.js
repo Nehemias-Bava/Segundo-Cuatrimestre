@@ -216,7 +216,7 @@ var Library = /** @class */ (function () {
                     this.deleteUser();
                     break;
                 default:
-                    console.log("baiiiii xxs");
+                    console.log("Adios, vuelta pronto! :D");
                     return;
             }
         }

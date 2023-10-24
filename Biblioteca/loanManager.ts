@@ -12,25 +12,25 @@ export class loanManager{
 
 
 
-    // static readUsers(): User[] {
-    //     try {
-    //         const userData = fs.readFileSync("./users.json", { encoding: "utf-8" });
-    //         return JSON.parse(userData) as User[];
-    //     } catch (err) {
-    //         console.error("Error al leer los datos de usuarios:", err);
-    //         throw err;
-    //     }
-    // };
+    static readUsers(): User[] {
+        try {
+            const userData = fs.readFileSync("./users.json", { encoding: "utf-8" });
+            return JSON.parse(userData) as User[];
+        } catch (err) {
+            console.error("Error al leer los datos de usuarios:", err);
+            throw err;
+        }
+    };
 
-    // static readItems(): Item[] {
-    //     try {
-    //         const itemsData = fs.readFileSync("./items.json", { encoding: "utf-8" });
-    //         return JSON.parse(itemsData) as Item[];
-    //     } catch (err) {
-    //         console.error("Error al leer los datos de ítems:", err);
-    //         throw err;
-    //     }
-    // };
+    static readItems(): Item[] {
+        try {
+            const itemsData = fs.readFileSync("./items.json", { encoding: "utf-8" });
+            return JSON.parse(itemsData) as Item[];
+        } catch (err) {
+            console.error("Error al leer los datos de ítems:", err);
+            throw err;
+        }
+    };
 
     static readLoans() {
         try {

@@ -32,9 +32,23 @@ var User = /** @class */ (function () {
         }
     };
     ;
+    User.prototype.applyPenalty = function () {
+        if (this.scoring >= 6) {
+            console.log("Usuario ".concat(this.name, " ha alcanzado 6 puntos de penalizaci\u00F3n."));
+            console.log("El usuario est\u00E1 penalizado y no puede retirar \u00EDtems por una semana.");
+            // Establecer la fecha de levantamiento de la penalización (1 semana después de la fecha actual)
+            var currentDate = new Date();
+            var oneWeekLater = new Date(currentDate);
+            oneWeekLater.setDate(currentDate.getDate() + 7);
+            this.penaltyCount += 1;
+            this.scoring = 0; // Reiniciar el scoring
+            console.log(oneWeekLater); // Devolver la fecha de levantamiento de la penalización
+        }
+    };
+    ;
     return User;
 }());
 exports.User = User;
-var usu = new User("samira", "callexd", 222222222);
+var usu = new User("Lyzi Tagliani", "Chacabuco", 12334455533);
 //usu.applyPenalty();
 usu.calculateScoring(2);

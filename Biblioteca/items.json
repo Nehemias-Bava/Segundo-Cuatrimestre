@@ -5,5 +5,33 @@
     "title": "Carretilla de Plastico",
     "year": "2010",
     "author": "Ricardo Ford"
+  },
+  {
+    "isAvailable": true,
+    "id": "c4540b90-e7c6-4a9a-95a4-bde992069681",
+    "title": "Frio en calor",
+    "year": "2001",
+    "editor": "Richard Parker"
+  },
+  {
+    "isAvailable": true,
+    "id": "d6487044-9f66-4661-a5e1-fc7c739fe886",
+    "title": "Asado con los pibes",
+    "year": "2018",
+    "author": "Lizy Tagliani"
+  },
+  {
+    "isAvailable": true,
+    "id": "0331ea33-aae7-466d-bf18-2f9571367b2b",
+    "title": "Lesiones",
+    "year": "2023",
+    "author": "Marcos Rojo"
+  },
+  {
+    "isAvailable": true,
+    "id": "cfc8c58e-cea2-42cd-ad87-ddced1f51d17",
+    "title": "",
+    "year": "",
+    "author": ""
   }
 ]
